@@ -1,0 +1,190 @@
+footer {
+  padding: 70px 0 0 0;
+  background-color: #191919;
+}
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 40px;
+}
+
+footer .container .box h3 {
+  color: white;
+  font-size: 30px;
+  margin: 0 0 20px;
+  text-transform: capitalize;
+}
+
+footer .container .box .social {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  footer .container .box .social {
+    justify-content: center;
+  }
+}
+
+footer .container .box .social li {
+  margin-right: 10px;
+}
+
+footer .container .box .social li a {
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+footer .container .box .social .facebook:hover {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+}
+
+footer .container .box .social .twitter:hover {
+  background-color: #191919;
+}
+
+footer .container .box .social .youtube:hover {
+  background-color: #ff0000;
+}
+footer .container .box .social .facebook:hover::after,
+footer .container .box .social .facebook:hover::before,
+footer .container .box .social .twitter:hover::before,
+footer .container .box .social .twitter:hover::after,
+footer .container .box .social .youtube:hover::after,
+footer .container .box .social .youtube:hover::before {
+  display: none;
+}
+
+footer .container .box .text {
+  line-height: 2;
+  color: #b9b9b9;
+}
+
+footer .container .box .links li {
+  padding: 15px 0;
+  transition: 0.3s;
+}
+
+footer .container .box .links li:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+
+footer .container .box .links li:hover {
+  padding-left: 10px;
+}
+
+footer .container .box .links li:hover a {
+  color: white;
+}
+
+footer .container .box .links li a {
+  color: #b9b9b9;
+  transition: 0.3s;
+}
+
+footer .container .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--mainColor);
+}
+
+footer .container .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  footer .container .box .line {
+    flex-direction: column;
+  }
+}
+
+footer .container .box .line svg {
+  font-size: 25px;
+  color: #1877f2;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  footer .box .line svg {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+footer .container .box .line .info {
+  line-height: 1.7;
+  flex: 1;
+}
+
+.footer .box .line .info span {
+  display: block;
+}
+
+footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+
+footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+}
+
+@media (max-width: 767px) {
+  footer .container {
+    grid-template-columns: auto;
+  }
+}
+
+.order-details {
+  padding: 0 20px;
+  color: var(--mainColor);
+  font-size: 16px;
+}

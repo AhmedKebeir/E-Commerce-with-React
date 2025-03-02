@@ -1,0 +1,166 @@
+.basket-items {
+  margin-top: 100px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.basket-items table {
+  min-width: 800px;
+  max-width: 800px;
+  border-collapse: collapse;
+  font-size: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.basket-items table thead {
+  background-color: #314a4d;
+  color: white;
+}
+.basket-items table th,
+.basket-items table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  width: 150px;
+}
+/* .basket-items table td:last-of-type {
+  border-right: 1px solid #ddd;
+}
+.basket-items table td:first-of-type {
+  border-left: 1px solid #ddd;
+} */
+.basket-items tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.basket-items tbody tr:hover {
+  background-color: #f1f1f1; /* تأثير عند تمرير الماوس */
+  transition: background-color 0.3s ease;
+}
+
+.basket-items tbody tr td img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.basket-items .checkout {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-self: start;
+  margin: 0;
+}
+.basket-items .checkout div {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  justify-content: space-between;
+}
+.basket-items .checkout div span:first-of-type {
+  color: rgba(33, 37, 41, 0.7) !important;
+}
+.basket-items .checkout div.discount {
+  width: 100%;
+  border: 1px solid #314a4d;
+  padding: 0;
+  overflow: hidden;
+  margin: 15px 0;
+}
+.basket-items .checkout div.discount input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  flex: 1;
+}
+
+.basket-items .checkout div.discount .btn-input {
+  padding: 10px;
+  background-color: #314a4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.basket-items a.apply {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #314a4d;
+  padding: 15px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.basket-items .or {
+  display: block !important;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.basket-items .or::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #314a4d;
+  top: -10px;
+  left: 0;
+}
+.basket-items .or::after {
+  content: "or";
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+
+  position: absolute;
+
+  top: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.basket-items .or a {
+  color: #314a4d;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .basket-items {
+    justify-content: center;
+  }
+  .basket-items .tabble {
+    overflow-x: scroll;
+  }
+  .basket-items .checkout {
+    width: 100%;
+  }
+  .basket-items table {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .basket-items table {
+    min-width: 800px;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+}

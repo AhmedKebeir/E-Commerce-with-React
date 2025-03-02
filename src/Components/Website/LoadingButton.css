@@ -1,0 +1,55 @@
+div.btn-load {
+  position: relative;
+  background-color: transparent;
+  width: 40px !important;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0 !important;
+  font-size: 0 !important;
+}
+
+div.btn-load .right {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  animation: leftt 1.5s linear infinite;
+}
+
+div.btn-load .left {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  position: absolute;
+  animation: rightt 1.5s linear infinite;
+}
+
+@keyframes leftt {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rightt {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: -360deg;
+  }
+}

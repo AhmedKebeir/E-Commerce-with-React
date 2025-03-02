@@ -1,0 +1,130 @@
+.feedback {
+  margin-top: 100px;
+}
+
+.feedback .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedback .container label {
+  color: #314a4d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feedback .container textarea {
+  padding: 20px 15px;
+  width: 100%;
+  resize: none;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.feedback .container button {
+  padding: 15px 15px;
+  border: none;
+  background-color: #314a4d;
+  color: white;
+  cursor: pointer;
+}
+
+.feedback .container form {
+  display: flex;
+  flex-direction: column;
+}
+.feedback .container form input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* table  */
+
+.feedback-user {
+  margin-top: 100px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.feedback-user table {
+  min-width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.feedback-user table thead {
+  background-color: #314a4d;
+  color: white;
+}
+.feedback-user table th,
+.feedback-user table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  width: 150px;
+}
+
+.feedback-user tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.feedback-user tbody tr:hover {
+  background-color: #f1f1f1; /* تأثير عند تمرير الماوس */
+  transition: background-color 0.3s ease;
+}
+
+.feedback-user tbody tr td img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.feedback-user tbody tr td .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.feedback-user tbody tr td .actions .update {
+  color: var(--mainColor);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.feedback-user tbody tr td .actions .delete {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .feedback-user {
+    justify-content: center;
+  }
+  .feedback-user .tabble {
+    overflow-x: scroll;
+  }
+
+  .feedback-user table {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .feedback-user table {
+    min-width: 800px;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+}

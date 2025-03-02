@@ -1,0 +1,352 @@
+header {
+  background-color: white;
+  position: relative;
+  box-shadow: 0 0 10px #ddd;
+  position: fixed;
+  z-index: 11111;
+  width: 100%;
+  top: 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container .logo {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .container .logo img {
+  width: 50px;
+}
+header .container .logo svg {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+header ul {
+  display: none;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  height: 63px;
+}
+header ul.links-first {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  height: 63px;
+}
+ul li {
+}
+ul li:hover::before {
+  background-color: #eee;
+}
+header ul li a {
+  display: flex;
+  color: black;
+  height: 63px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+}
+header ul li a::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #314a4d;
+  top: 0px;
+  left: -100%;
+  transition: 0.3s;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #314a4d;
+  bottom: 0;
+  right: -100%;
+  transition: 0.3s;
+}
+header ul li a:hover::before {
+  left: 0;
+}
+header ul li a:hover::after {
+  right: 0;
+}
+header ul li a:hover {
+  color: #314a4d;
+  background-color: #fafafa;
+}
+
+header .container .auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn,
+.logout {
+  background-color: #344e52;
+  padding: 10px 15px;
+  width: 92px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.btn:hover,
+.logout:hover {
+  background-color: #314a4d;
+}
+
+.logout {
+  border: none;
+  cursor: pointer;
+}
+
+header .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.basket span {
+  position: absolute;
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 40px;
+  background-color: #314a4d;
+  color: white;
+  top: -10px;
+  right: -10px;
+  text-align: center;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #bbbbbb85;
+}
+
+header .container .content .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #314a4d;
+  padding: 0px 10px 0px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+header .container .content .search input {
+  outline: none;
+  border: none;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+header .container .content .search svg {
+  cursor: pointer;
+  color: white;
+  padding: 11px 15px;
+  background-color: #314a4d;
+}
+
+@media (min-width: 1200px) {
+  header .container .logo svg {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  header .container .logo svg {
+    display: inline-block;
+  }
+  header ul {
+    width: 250px;
+    height: fit-content;
+    display: block;
+    background-color: #bbbbbb85;
+    position: absolute;
+    top: 63px;
+    z-index: 111;
+    left: 90px;
+    transition: 0.3s;
+  }
+  header ul::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    border: 15px solid;
+    border-color: transparent transparent #bbbbbb85;
+  }
+  header ul li a {
+    justify-content: flex-start;
+    padding-left: 30px;
+    height: 60px;
+  }
+  header ul.links-first {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  header .container .logo {
+    gap: 20px;
+  }
+  header .container ul {
+    left: 90px;
+  }
+  header .container .auth {
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  header .mobile-links {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  header .container .auth a,
+  header .container .auth .logout {
+    display: none;
+  }
+  header .container ul {
+    left: 57px;
+    display: none;
+  }
+  header .container .content .search {
+    display: none;
+  }
+  header .mobile-links {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    width: 0px;
+    height: 75vh;
+    z-index: 11111;
+    background-color: #fafafa;
+    transition: 0.3s;
+  }
+  header .mobile-links .display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  header .display img {
+    width: 50px;
+  }
+  header .display svg {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+  }
+  header .mobile-links .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #314a4d;
+  }
+  header .mobile-links .search input {
+    border: none;
+    font-size: 16px;
+    padding: 10px 10px 10px 10px;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+  }
+  header .mobile-links .search svg {
+    background-color: #314a4d;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  header .mobile-links ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 20px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+  header .mobile-links ul li {
+    width: 100%;
+  }
+  header .mobile-links ul::before {
+    display: none;
+  }
+  header .mobile-links .auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+  header .mobile-links .auth a,
+  .logout {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  header .container .auth .basket-icone {
+    display: block;
+  }
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #bbbbbb85;
+  position: relative;
+  padding: 0.45rem 1.35rem;
+  font-size: 1rem;
+}
+.basket svg {
+  width: 60px;
+  cursor: pointer;
+  color: black;
+}

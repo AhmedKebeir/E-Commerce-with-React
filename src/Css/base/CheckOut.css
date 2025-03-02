@@ -1,0 +1,117 @@
+.checkout-fin {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-self: start;
+  margin: 0;
+  overflow: hidden;
+}
+
+.checkout-fin .container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.checkout-fin .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding: 30px 0;
+}
+.checkout-fin .container form div {
+  border: 1px solid #314a4d;
+  position: relative;
+  border-radius: 6px;
+}
+.checkout-fin .container form div.city select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+}
+.checkout-fin .container form div.city label {
+  top: -3px;
+  opacity: 1;
+}
+
+.checkout-fin .container form div input {
+  padding: 15px 15px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+.checkout-fin label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.checkout-fin form input:not(:placeholder-shown) + label {
+  opacity: 1;
+  top: -13px;
+  transform: none;
+}
+
+.checkout-fin .container .sub {
+  border: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-fin .container .sub button {
+  border: none;
+  background-color: #314a4d;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.checkout-fin .container .sub a {
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1200px) {
+  .basket-items {
+    justify-content: center;
+  }
+  .basket-items .container {
+    width: 100%;
+  }
+  .basket-items .tabble {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .basket-items .checkout-fin {
+    width: 100%;
+  }
+  .basket-items .tabble table {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .basket-items table {
+    min-width: 800px;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,131 @@
+/* .form {
+  background-image: linear-gradient(120deg, white 0%, white 50%);
+  width: 100%;
+  height: 35rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.parent {
+  background-color: #e9effb;
+}
+
+.form::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../../Images/register-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form h1 {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form input {
+  display: block;
+  margin-bottom: 5px;
+  width: 60%;
+  outline: none;
+  border: 1px solid #777;
+  border-radius: 8px;
+  padding: 10px;
+}
+.form input:not(:placeholder-shown) {
+  border-color: green;
+}
+.form input:not(:placeholder-shown) + label {
+  opacity: 1;
+  top: -52px;
+}
+
+form label {
+  width: fit-content;
+  margin-left: 21.5%;
+  padding: 0 4px;
+  position: relative;
+  top: -35px;
+  background-color: white;
+  font-size: 14px;
+  align-self: flex-start;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.form .inputs,
+.form .or {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form button {
+  width: 60%;
+  padding: 15px;
+  border: none;
+  color: white;
+  background-color: #314a4d;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.form .inputs {
+  margin-bottom: 20px;
+}
+.form .or .line {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  background-color: #314a4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form .or .line::before {
+  content: "or";
+  position: absolute;
+  padding: 0 10px;
+  top: -12px;
+  background-color: white;
+}
+.form .others {
+  width: 60%;
+  text-align: center;
+  margin-top: 15px;
+  color: #314a4d;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.form .others a {
+  width: 60%;
+  text-align: center;
+  font-size: 14px;
+  color: #314a4d;
+  justify-content: center;
+  width: fit-content;
+}
+
+.error {
+  width: 50%;
+  margin-top: 20px;
+}
+.err {
+  width: 60%;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #f8d7da;
+  color: #842029;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto;
+} */
