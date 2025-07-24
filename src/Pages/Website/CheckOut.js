@@ -168,7 +168,7 @@ export default function CheckOut() {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">-- Choose a City --</option>
+                  <option value={form.payment}>-- Choose a City --</option>
                   {cities.map((city) => (
                     <option key={city} value={city}>
                       {city}
@@ -181,7 +181,7 @@ export default function CheckOut() {
                 <select
                   id="payment"
                   name="payment"
-                  value={form.city}
+                  value={form.payment}
                   onChange={handleChange}
                   required
                 >
@@ -191,7 +191,9 @@ export default function CheckOut() {
                 </select>
               </div>
               {form.payment === "insta" ? (
-                <p className="insta-phone">This is InstaPay number:</p>
+                <p className="insta-phone">
+                  This is InstaPay number:01015738335
+                </p>
               ) : (
                 ""
               )}

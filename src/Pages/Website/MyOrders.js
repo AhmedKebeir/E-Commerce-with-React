@@ -117,7 +117,7 @@ export default function MyOrders() {
                   })
                 ) : (
                   <tr>
-                    <td colSpan="6">No reviews.</td>
+                    <td colSpan="6">No Orders.</td>
                   </tr>
                 )}
               </tbody>
