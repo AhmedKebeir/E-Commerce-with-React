@@ -149,7 +149,7 @@ export default function AllFeedback() {
                   })
                 ) : (
                   <tr>
-                    <td colSpan="6">No reviews.</td>
+                    <td colSpan="8">No reviews.</td>
                   </tr>
                 )}
               </tbody>

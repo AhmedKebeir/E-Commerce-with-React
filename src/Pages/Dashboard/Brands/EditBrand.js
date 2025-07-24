@@ -31,7 +31,7 @@ export default function EditBrand() {
         }
       );
       setLoad(false);
-      console.log(res.status);
+      // console.log(res.status);
       if (res.status === 200) {
         nav("/dashboard/brands");
       }

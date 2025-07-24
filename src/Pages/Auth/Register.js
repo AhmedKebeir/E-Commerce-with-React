@@ -9,6 +9,7 @@ export default function Register() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     password: "",
     passwordConfirm: "",
   });
@@ -38,6 +39,7 @@ export default function Register() {
       console.log("success");
     } catch (err) {
       setError(() => err.response.data.errors);
+      console.log(err);
     }
   }
 
@@ -70,6 +72,17 @@ export default function Register() {
                   required
                 />
                 <label htmlFor="email">Email:</label>
+                {/* phone  */}
+                <input
+                  type="number"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter Your Phone Number...."
+                  value={form.phone}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="phone">Phone:</label>
                 <input
                   type="password"
                   id="password"

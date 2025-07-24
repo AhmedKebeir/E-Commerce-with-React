@@ -27,12 +27,11 @@ export default function Login() {
     e.preventDefault();
     setLoad(true);
     try {
-      const res = await axios
-        .post(`${baseUrl}/${LOGIN}`, form)
-        .then((res) => res.data);
+      const res = await axios.post(`${baseUrl}/${LOGIN}`, form);
+
       const role = res.data.role;
-      cookie.set("e-commerce", res.token);
-      // console.log(res);
+      cookie.set("e-commerce", res.data.token);
+      console.log(res);
       if (role === "admin") {
         setLoad(false);
         Nav("/dashboard/products");

@@ -59,6 +59,9 @@ export default function DetailsOrder() {
           <h2>City: {orders?.shippingAddress?.city}</h2>
           <h2>Phone: {orders?.shippingAddress?.phone}</h2>
           <h2>ZipCode: {orders?.shippingAddress?.zipCode}</h2>
+          <h2>
+            Payment Method Type: {orders?.shippingAddress?.paymentMethodType}
+          </h2>
         </div>
         <div className="container">
           <div className="tabble">

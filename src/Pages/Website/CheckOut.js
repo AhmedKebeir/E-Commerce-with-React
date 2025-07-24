@@ -29,7 +29,7 @@ export default function CheckOut() {
     phone: "01",
     street: "",
     city: "",
-    zipcode: 0,
+    payment: "",
   });
 
   useEffect(() => {
@@ -51,37 +51,34 @@ export default function CheckOut() {
         address: form.street || "",
         phone: form.phone || "",
         city: form.city || "",
-        zipCode: form.zipcode || "",
+        paymentMethodType: form.payment || "",
       },
     };
     console.log(data);
     try {
-      const res = await axios.post(
-        `https://watch-website-main-dsup.vercel.app/api/v1/orders/direct-order`,
-        data,
-        {
-          headers: {
-            Authorization: "Bearer " + token,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const res = await axios.post(`${baseUrl}/orders/direct-order`, data, {
+        headers: {
+          Authorization: "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+      });
       console.log(res);
       if (res.status === 201) {
         window.localStorage.removeItem("product");
         nav("/", { replace: true });
       }
     } catch (err) {
-      setErr("Error:", err.response ? err.response.message : err.message);
+      // setErr("Error:", err.response ? err.response.message : err.message);
+      nav();
     }
   }
 
-  console.log(setErr);
+  // console.log(setErr);
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
-  // console.log(form);
+  console.log(form);
   return (
     <>
       <Header />
@@ -179,18 +176,25 @@ export default function CheckOut() {
                   ))}
                 </select>
               </div>
-              <div className="zip-code">
-                <input
-                  type="text"
-                  name="zipcode"
-                  id="zipcode"
-                  placeholder="Zip Code..."
-                  value={form.zipCode}
+              <div className="city">
+                <label htmlFor="payment">Select type payment:</label>
+                <select
+                  id="payment"
+                  name="payment"
+                  value={form.city}
                   onChange={handleChange}
                   required
-                />
-                <label htmlFor="zipcode">Zip Code:</label>
+                >
+                  <option value="">-- Choose a payment --</option>
+                  <option value="cach">Cach</option>
+                  <option value="insta">InstaPay</option>
+                </select>
               </div>
+              {form.payment === "insta" ? (
+                <p className="insta-phone">This is InstaPay number:</p>
+              ) : (
+                ""
+              )}
               <div className="country">
                 <input
                   type="text"

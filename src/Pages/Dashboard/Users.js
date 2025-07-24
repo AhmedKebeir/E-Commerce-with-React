@@ -39,7 +39,7 @@ export default function Users() {
         setLoad(false);
       });
   }, [reload]);
-  console.log(users);
+
 
   async function removeUser(id) {
     const res = await axios.delete(`${baseUrl}/${GETALLUSERS}/${id}`, {

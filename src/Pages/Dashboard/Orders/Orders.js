@@ -48,7 +48,7 @@ export default function Orders() {
     fetchProducts();
   }, [orders]);
 
-  // console.log(orders);
+  console.log(orders);
 
   async function deleteOrder(id) {
     try {
@@ -79,6 +79,7 @@ export default function Orders() {
                   <th>quantity of products</th>
                   <th>Date&Time</th>
                   <th>Total Price</th>
+                  <th>Payment Method</th>
                   <th>Details</th>
                   <th>Actions</th>
                 </tr>
@@ -96,6 +97,7 @@ export default function Orders() {
                         </td>
                         <td>{new Date(order.createdAt).toLocaleString()}</td>
                         <td>{order.totalOrderPrice} EGP</td>
+                        <td>{order?.shippingAddress?.paymentMethodType} </td>
                         <td>
                           <Link
                             style={{ color: "#344e52", fontWeight: "700" }}
@@ -118,7 +120,7 @@ export default function Orders() {
                   })
                 ) : (
                   <tr>
-                    <td colSpan="6">No reviews.</td>
+                    <td colSpan="6">No Orderes.</td>
                   </tr>
                 )}
               </tbody>
