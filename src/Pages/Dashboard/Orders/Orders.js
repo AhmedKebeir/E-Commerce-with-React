@@ -58,8 +58,8 @@ export default function Orders() {
           "Content-Type": "application/json",
         },
       });
-      console.log(res.status);
-      if (res.status === 204) {
+      console.log(res);
+      if (res.status === 200) {
         setDel((prev) => !prev);
       }
     } catch (err) {

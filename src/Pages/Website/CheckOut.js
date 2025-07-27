@@ -45,7 +45,7 @@ export default function CheckOut() {
       cartItems: products.map((p) => ({
         product: p._id,
         quantity: p.quantity,
-        color: p.color || "",
+        // color: p.color || "",
       })),
       shippingAddress: {
         address: form.street || "",
@@ -186,11 +186,11 @@ export default function CheckOut() {
                   required
                 >
                   <option value="">-- Choose a payment --</option>
-                  <option value="cach">Cach</option>
-                  <option value="insta">InstaPay</option>
+                  <option value="cash">Cash</option>
+                  <option value="InstaPay">InstaPay</option>
                 </select>
               </div>
-              {form.payment === "insta" ? (
+              {form.payment === "InstaPay" ? (
                 <p className="insta-phone">
                   This is InstaPay number:01015738335
                 </p>

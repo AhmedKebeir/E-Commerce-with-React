@@ -50,6 +50,7 @@ export default function MyOrders() {
   // console.log(orders);
 
   async function deleteOrder(id) {
+    console.log(id);
     try {
       let res = await axios.delete(`${baseUrl}/orders/${id}`, {
         headers: {
@@ -57,14 +58,15 @@ export default function MyOrders() {
           "Content-Type": "application/json",
         },
       });
-      console.log(res.status);
-      if (res.status === 204) {
+      console.log(res);
+      if (res.status === 200) {
         setDel((prev) => !prev);
       }
     } catch (err) {
       console.log(err);
     }
   }
+  console.log(orders);
 
   return (
     <>
@@ -108,7 +110,7 @@ export default function MyOrders() {
                             <FontAwesomeIcon
                               icon={faTrash}
                               className="delete"
-                              onClick={() => deleteOrder(order._id)}
+                              onClick={() => deleteOrder(order?._id)}
                             />
                           </div>
                         </td>
