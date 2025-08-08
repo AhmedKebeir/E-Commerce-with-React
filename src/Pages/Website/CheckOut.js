@@ -56,7 +56,7 @@ export default function CheckOut() {
     };
     console.log(data);
     try {
-      const res = await axios.post(`${baseUrl}/orders/direct-order`, data, {
+      const res = await axios.post(`${baseUrl}/orders/cashOrder`, data, {
         headers: {
           Authorization: "Bearer " + token,
           "Content-Type": "application/json",
