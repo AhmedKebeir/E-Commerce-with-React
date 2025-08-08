@@ -1,4 +1,4 @@
-export const baseUrl = `https://ecommerce-watches-weld.vercel.app/api/v1`;
+export const baseUrl = `https://ecommerce-watches-delta.vercel.app/api/v1`;
 
 export const REGISTER = `auth/signup`;
 
