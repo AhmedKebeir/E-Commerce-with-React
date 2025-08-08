@@ -18,7 +18,7 @@ export const CATEGORIES = "categories";
 
 export const SUBCAT = "subcategories";
 
-export const ORDERS = "direct-order";
+export const ORDERS = "cashOrder";
 
 export const GETORDERSUSER = "orders/my-orders";
 
