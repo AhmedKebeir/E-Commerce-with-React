@@ -31,9 +31,9 @@ export default function HomePage() {
               Explore our exclusive collection to elevate your style
               effortlessly!
             </p>
-            <Link to="/products" className="btn">
+            <a href="#products" className="btn">
               Shop now
-            </Link>
+            </a>
           </section>
           <section className="image-landing">
             <div>
