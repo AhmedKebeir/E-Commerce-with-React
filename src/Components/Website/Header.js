@@ -103,9 +103,13 @@ export default function Header() {
           <li>
             <Link to="/feedback">Feedback</Link>
           </li>
-          <li>
-            <Link to="/myorders">My Orders</Link>
-          </li>
+          {user.role === "admin" ? (
+            ""
+          ) : (
+            <li>
+              <Link to="/myorders">My Orders</Link>
+            </li>
+          )}
         </ul>
         <div className="auth">
           {user !== "" ? (

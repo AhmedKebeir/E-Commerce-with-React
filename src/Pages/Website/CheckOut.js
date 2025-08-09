@@ -191,9 +191,16 @@ export default function CheckOut() {
                 </select>
               </div>
               {form.payment === "InstaPay" ? (
-                <p className="insta-phone">
-                  This is InstaPay number:01015738335
-                </p>
+                <>
+                  <p className="insta-phone">
+                    This is InstaPay number:01015738335
+                  </p>
+                  <p className="insta-phone">
+                    :ابعت صورة التحويل على الواتساب
+                    <br />
+                    01015738335
+                  </p>
+                </>
               ) : (
                 ""
               )}
