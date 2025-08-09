@@ -31,7 +31,7 @@ export default function HomePage() {
               Explore our exclusive collection to elevate your style
               effortlessly!
             </p>
-            <Link to="/Product" className="btn">
+            <Link to="/products" className="btn">
               Shop now
             </Link>
           </section>
